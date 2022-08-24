@@ -1,0 +1,19 @@
+
+# HTID:20323058: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:20323058:
+#mod_rewrite starts here
+RewriteEngine on 
+
+# does not apply to existing directories, if folde exists don't change anything and don't run the rule
+
+RewriteCond ${REQUEST_FILENAME} !-d
+
+#Check for file in directory with .php extension
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+#Show the page that has the .php extension
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+
