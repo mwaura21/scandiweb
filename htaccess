@@ -5,7 +5,7 @@ php_value display_errors 1
 #mod_rewrite starts here
 RewriteEngine on 
 
-# does not apply to existing directories, if folde exists don't change anything and don't run the rule
+# does not apply to existing directories, if folder exists don't change anything and don't run the rule
 
 RewriteCond ${REQUEST_FILENAME} !-d
 
